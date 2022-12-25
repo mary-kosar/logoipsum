@@ -1,9 +1,17 @@
 .footer-wrapper {
     padding-top: 63px;
     padding-bottom: 80px;
-    background:  $c-gradient-primary;
-    mix-blend-mode: normal;
-    // opacity: 0.05;    
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background:  $c-gradient-primary;
+        mix-blend-mode: normal;
+        opacity: 0.05;
+        width: 100%;
+        height: 100%; 
+        top: 0;
+    }  
 }
 .footer {
 	&__top {
@@ -50,16 +58,31 @@
             }
 	}
 	&__bottom {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 100px;
-            justify-content: center;
-            @include tablet-small {
-                flex-direction: column;
-                gap: 30px;
-                align-items: center;
-                text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        @include tablet-small {
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            text-align: center;
+        }
+        @include mobile {
+            .footer__bottom__menu,
+            .footer__bottom__product {
+                &._active {
+                    .product__list,
+                    .menu__list  {
+                        display: block;
+                    }
+                }
             }
+            .product__list,
+            .menu__list {
+                display: none;
+            }        
+        }
 	}
 }
 .menu {
@@ -88,8 +111,6 @@
         @include text($font-body, 700, 16px, 20px, $c-title);
                 margin-bottom: 20px;
     }
-	&__list {
-	}
 	&__item:not(:last-child) {
                 margin-bottom: 20px;
         }
@@ -97,3 +118,7 @@
                 @include text($font-body, 400, 16px, 20px, $c-body);
 	}
 }
+
+
+
+

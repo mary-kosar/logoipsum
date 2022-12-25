@@ -1,18 +1,15 @@
 .review {
-    background: $c-gradient-primary;
-}
-
-.review-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    margin-top: 120px;
-    margin-bottom: 150px;
-    @include mobile {
-        margin-top: 70px;
-        margin-bottom: 70px;
-    }
-}
-.review {
+        background: $c-gradient-primary;
+        &__container {
+                padding-top: 120px;
+                padding-bottom: 120px;
+                margin-top: 120px;
+                margin-bottom: 150px;
+                @include mobile {
+                    margin-top: 70px;
+                    margin-bottom: 70px;
+                }
+        }
 	&__info {
         text-align: center;
         margin: 0 auto;
@@ -26,10 +23,6 @@
         color: $c-white;
         margin-bottom: 100px;
 	}
-}
-.slider {
-        // display: flex;
-        // gap: 20px;
 }
 .owl-theme .owl-dots{
         display: none;
@@ -50,10 +43,6 @@
                 display: flex;
                 gap: 14px;
                 align-items: center;
-	}
-	&__img {
-	}
-	&__desc {
 	}
 	&__name {
                 @include text($font-body, 700, 16px, 20px, $c-white);
