@@ -1,0 +1,48 @@
+
+.faq {    
+	&__title {
+        margin-bottom: 60px;
+        text-align: center;
+	}
+	&__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+	}
+	&__item {
+        border: 1px solid rgba(205, 16, 255, 0.3);
+        border-radius: $b-radius-block;
+        padding: 28px 40px 40px 40px;
+        @include mobile {
+            padding: 20px;
+        }
+        &._active {
+            .faq__body {
+                display: block;
+            }
+            .item__arrow {
+                transform: rotate(180deg);
+            }
+        }
+	}
+	&__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+	}
+	&__body {
+        @include text($font-body, 400, 16px, 26px, $c-body);
+        display: none; 
+        margin-top: 8px;
+        padding-bottom: 4px;                       
+	}
+}
+.item {
+	&__title {
+        @include text($font-title, 700, 20px, 24px, $c-title)                        
+	}
+	&__arrow {
+        transition: $transition;
+	}
+}

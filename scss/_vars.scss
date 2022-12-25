@@ -1,0 +1,28 @@
+$font-body: "Mulish", sans-serif;
+$font-title: 'Montserrat', sans-serif;
+
+$c-primary: rgba(205, 16, 255, 1);
+$c-secondary: rgba(159, 7, 255, 1);
+$c-secondary-dark: rgba(76, 0, 112, 0.195968);
+$c-title: #001A49;
+$c-body: #4F596A;
+$c-white-dark:#F4F9FA; 
+$c-white: #ffffff;
+
+
+$c-gradient-primary: linear-gradient(44.11deg, #CD10FF 15.75%, #9F06FF 84.63%);
+$c-gradient-secondaty: linear-gradient(90deg, #FFD7A9 0%, #FFAE70 100%);
+
+$c-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0501257);
+$c-border: #E7EAEB;
+
+$b-radius-btn: 33px;
+$b-radius-block: 21px;
+
+$transition: 0.2s all ease-in-out;
+
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;

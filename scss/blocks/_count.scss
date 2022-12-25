@@ -1,0 +1,63 @@
+.count {
+    position: relative;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px 0;
+        background: $c-white;
+        border: 1px solid $c-border;
+        border-radius: 21px;
+        margin-top: 100px;
+        position: relative;
+        z-index: 1;
+        @include desktop-small {
+            grid-template-columns: 1fr;
+            padding: 20px 60px;
+        }
+    }    
+    &__item {
+        padding: 20px 0;
+        text-align: center;
+        &:not(:last-child) {
+            border-right: 1px solid $c-border;
+        }
+        @include desktop-small {
+            &:not(:last-child) {
+                border-right: 0;
+                border-bottom: 1px solid $c-border;
+            } 
+        }
+    }    
+    &__amount {
+        @include text($font-title, 700, 40px, 50px, $c-title);
+    }
+    &__title {
+        @include text($font-body, 400, 16px, 20px, $c-body);
+    }
+    &__circle{
+        &._big {
+            background: $c-gradient-primary;
+            border-radius: 50%;
+            position: absolute;
+            width: 288px;
+            height: 288px;
+            left: 0;
+            top: 20px;
+        }
+        &._small {
+            background: $c-gradient-secondaty;
+            border-radius: 50%;
+            position: absolute;
+            width: 86px;
+            height: 86px;
+            left: 200px;
+            bottom: -140px;
+        }
+        @include desktop-small {
+            &._big {
+                top: 220px;
+            }
+        }
+    }    
+}
+

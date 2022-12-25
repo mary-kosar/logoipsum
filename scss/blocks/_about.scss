@@ -1,0 +1,51 @@
+.about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+	&__info {
+                max-width: 560px;
+	}
+	&__title {
+              margin-bottom: 20px;  
+	}
+	&__img {
+        background: $c-gradient-primary;
+        border-radius: 50%;
+        position: relative;
+        &::before, 
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            border-radius: 50%;
+            mix-blend-mode: normal;
+            background: $c-gradient-secondaty;           
+        }
+        &::before {
+            width: 88px;
+            height: 88px;
+            top: -11px;
+            left: -25px;
+            z-index: -1;
+        }
+        &::after {
+            width: 132px;
+            height: 132px;
+            opacity: 0.3;
+            right: -40px;
+            bottom: -17px;
+        }
+        img {
+            position: relative;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        @include tablet {
+            margin-bottom: 20px;
+        }
+	}
+}
+

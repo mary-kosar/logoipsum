@@ -1,0 +1,61 @@
+.review {
+    background: $c-gradient-primary;
+}
+
+.review-container {
+    padding: 120px 0;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    @include mobile {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+}
+.review {
+	&__info {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 560px;
+	}
+	&__title {
+        margin-bottom: 20px;
+        color: $c-white;
+	}
+	&__desc {
+        color: $c-white;
+        margin-bottom: 100px;
+	}
+}
+.slider {
+        // display: flex;
+        // gap: 20px;
+}
+.owl-theme .owl-dots{
+        display: none;
+}
+.card {
+        background: $c-secondary-dark;
+        border-radius: $b-radius-block;
+        max-width: 550px;
+        padding: 50px 40px 40px 50px;
+	&__body {
+                @include text($font-body, 400, 20px, 30px, $c-white); 
+                margin-bottom: 30px;
+	}
+	&__info {
+                display: flex;
+                gap: 14px;
+                align-items: center;
+	}
+	&__img {
+	}
+	&__desc {
+	}
+	&__name {
+                @include text($font-body, 700, 16px, 20px, $c-white);
+                margin-bottom: 4px;
+	}
+	&__prof {
+                @include text($font-body, 400, 16px, 20px, $c-white);
+	}
+}

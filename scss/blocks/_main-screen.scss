@@ -1,0 +1,96 @@
+.main-screen {
+    padding-top: 134px;
+    padding-bottom: 94px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    &:before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        background: $c-gradient-primary;
+        mix-blend-mode: normal;
+        opacity: 0.05;
+        border-radius: 0px 20px 20px 0px;
+        left: 0;
+        top: 0;
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &__container {
+        z-index: 3;
+    }
+	&__info {
+        max-width: 560px;
+        @include tablet-small {
+            max-width: 100%
+        }
+	}
+	&__title {
+        @include text($font-title, 700, 60px, 68px, $c-title);
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+	}
+	&__desc {
+         @include text($font-body, 400, 20px, 30px, $c-body);
+         margin-bottom: 40px;
+	}
+    &__btn {
+        padding: 20px 50px;
+    }
+	&__video {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        z-index: 2;
+        @include desktop-small {
+            position: static;
+        }
+	}
+    &__students {        
+        margin-top: 100px;
+        @include desktop-small {
+            
+            margin-bottom: 50px;
+        }
+        @include mobile {
+            margin-top: 50px;
+        }
+    }
+    @include desktop-small {
+        flex-direction: column;
+    }
+    @include mobile {
+        padding: 70px 0;
+    }
+}
+.students {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    @include mobile {
+        flex-direction: column;
+    }
+	&__img {
+        border: 4px solid $c-white-dark;
+        border-radius: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover; 
+        }
+        &:not(:first-child) {
+            margin-left: -20px;
+        }
+	}
+	&__text {
+        @include text($font-body, 400, 16px, 20px, $c-body);
+        span {
+            color: $c-secondary;
+        }
+	}
+}

@@ -1,0 +1,15 @@
+/*
+Error: Undefined variable: "$font".
+        on line 8 of D:/mariia/course theory/19 logoipsum/scss/_base.scss
+        from line 4 of D:\mariia\course theory\19 logoipsum\scss\style.scss
+
+3: @import "mixins";
+4: @import "base";
+5: @import "blocks/header";
+6: @import "blocks/footer";
+
+
+body:before {
+  white-space: pre;
+  font-family: $font-body;
+  content: "Error: Undefined variable: \"$font\".\A         on line 8 of D:/mariia/course theory/19 logoipsum/scss/_base.scss\A         from line 4 of D:\mariia\course theory\19 logoipsum\scss\style.scss\A \A 3: @import \"mixins\";\A 4: @import \"base\";\A 5: @import \"blocks/header\";\A 6: @import \"blocks/footer\";"; }

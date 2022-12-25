@@ -1,0 +1,103 @@
+.services {
+    padding-top: 150px;
+    padding-bottom: 120px;
+    position: relative;
+        &__title {
+                margin: 0 auto;
+                text-align: center;
+                max-width: 560px;
+                padding-bottom: 20px;
+}        
+        &__desc {
+                font-size: 20px;
+                margin: 0 auto;
+                text-align: center;
+                max-width: 560px;
+                padding-bottom: 60px;
+        }
+        &__list-block {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+        }
+        &__list {
+                padding: 40px 54px 40px 46px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                &::before {
+                        content: '';
+                        position: absolute;
+                        background: $c-gradient-primary;
+                        opacity: 0.05;                
+                        border-radius: $b-radius-block;
+                        width: 100%;
+                        height: 100%;
+                        @include desktop-small {
+                                top: 0;
+                        }
+                }                
+                @include desktop-small {
+                        flex-direction: column;
+                        padding: 40px 20px;
+                }
+        }
+        &__item {
+                display: flex;
+                gap: 20px;
+                @include mobile {
+                        flex-direction: column;
+                        align-items: center;
+                }
+        }
+        &__info {
+                @include mobile {
+                        text-align: center;
+                }
+                &__title {
+                        @include text($font-title, 700, 24px, 24px, $c-title);
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                }
+                &__desc {
+                        @include text($font-body, 400, 16px, 24px, $c-body);
+                        max-width: 500px;
+                }
+        }
+        &__btn {
+                padding: 13px 35px;
+                max-width: 278px;
+                display: flex;
+                align-items: center;
+                @include text($font-body, 600, 16px, 20px, $c-white);
+                @include desktop-small {
+                        margin-top: 20px;
+                }
+        }
+        &__video {
+                border-right: 2px solid #8639B5;
+                padding: 10px 20px 10px 0;
+                @include mobile {
+                        padding: 0px 10px 0px 0;
+                }
+        }
+        &__hours {
+                padding-left: 20px;
+                @include mobile {
+                        padding-left: 10px;
+                }
+        }
+        &__circle {
+                &._big {
+                        position: absolute;
+                        background: $c-gradient-secondaty;
+                        width: 382px;
+                        height: 382px;
+                        border-radius: 50%;
+                        top: 0;
+                        right: 0;
+                        z-index: -1;
+                }
+        }
+}
