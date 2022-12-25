@@ -3,7 +3,8 @@
 }
 
 .review-container {
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
     margin-top: 120px;
     margin-bottom: 150px;
     @include mobile {
@@ -38,6 +39,9 @@
         border-radius: $b-radius-block;
         max-width: 550px;
         padding: 50px 40px 40px 50px;
+        @include mobile {
+                padding: 20px;
+        }
 	&__body {
                 @include text($font-body, 400, 20px, 30px, $c-white); 
                 margin-bottom: 30px;
