@@ -35,6 +35,9 @@
         @include text($font-body, 400, 16px, 20px, $c-body);
     }
     &__circle{
+        @include tablet-small {
+            display: none;
+        }  
         &._big {
             background: $c-gradient-primary;
             border-radius: 50%;
