@@ -37,9 +37,3 @@ function toggleItem(id) {
   var item = document.getElementById(id);
   item.classList.toggle("_active");
 }
-
-function toggleList(id) {
-  var list = document.getElementById(id);
-  list.classList.toggle("_active");
-}
-
